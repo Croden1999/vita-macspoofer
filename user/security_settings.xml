@@ -22,36 +22,36 @@
       
     </setting_list>
 	
-	<setting_list id="setting_list_macspoof" title="MAC Address Spoof" icon="tex_spanner">
+	<setting_list id="setting_list_macspoof" title="msg_macspoofer" icon="tex_spanner">
 		
 		<!-- main toggle -->
 		<toggle_switch id="id_macspoof_enabletoggle"
-					   title="Enable MAC Spoofing"
+					   title="msg_enable_macspoofing"
 					   icon="tex_spanner"
 					   key="/CONFIG/MACSPOOF/enable_mac_spoofing"/>
 
 		<!-- style select -->
-		<list id="id_macspoof_character" key="/CONFIG/MACSPOOF/styleformat" icon="tex_spanner" title="Style Format">
-			<list_item id="id_macspoof_zero" title="00:00:00:00:00:00" value="0"/>
-			<list_item id="id_macspoof_xxxx" title="XX:XX:XX:XX:XX:XX" value="1"/>
-			<list_item id="id_macspoof_ques" title="??:??:??:??:??:??" value="2"/>
-			<list_item id="id_macspoof_hash" title="##:##:##:##:##:##" value="3"/>
-			<list_item id="id_macspoof_mins" title="--:--:--:--:--:--" value="4"/>
+		<list id="id_macspoof_character" key="/CONFIG/MACSPOOF/styleformat" icon="tex_spanner" title="msg_styleformat">
+			<list_item id="id_macspoof_zero" title="msg_styleformat_0" value="0"/>
+			<list_item id="id_macspoof_xxxx" title="msg_styleformat_1" value="1"/>
+			<list_item id="id_macspoof_ques" title="msg_styleformat_2" value="2"/>
+			<list_item id="id_macspoof_hash" title="msg_styleformat_3" value="3"/>
+			<list_item id="id_macspoof_mins" title="msg_styleformat_4" value="4"/>
 		</list>
 		
 		<spacer id="id_macspoof_spacer1" height="24"/>
 		
 		<!-- enable custom text -->
 		<toggle_switch id="id_macspoof_usecustomtext"
-					   title="Use Custom Text"
-					   description="Enable to show a custom text of your choice instead"
+					   title="msg_enable_customtext"
+					   description="msg_show_usecustomtext"
 					   icon="tex_spanner"
 					   key="/CONFIG/MACSPOOF/enable_customtext"/>
 					   
 		<!-- enter custom text -->
 		<text_field id="id_macspoof_customtext"
-					title="Enter Custom Text"
-					description="You can use up to 18 characters"
+					title="msg_enter_customtext"
+					description="msg_custom_text"
 					key="/CONFIG/MACSPOOF/custom_text"
 					keyboard_type="basic_latin"
 					max_length="18"/>

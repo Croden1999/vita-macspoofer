@@ -3,20 +3,20 @@
 #include <psp2/io/fcntl.h>
 #include <psp2/io/stat.h>
 #include <psp2/registrymgr.h>
+#include <psp2/system_param.h>
 #include <taihen.h>
-
 #include <stdio.h>
 #include <stdarg.h>
 #include <stdlib.h>
 #include <string.h>
+#include "language.h"
 
 #define CONFIG_PATH "ur0:tai/macspoofer.cfg"
 
 extern unsigned char _binary_security_settings_xml_start;
 extern unsigned char _binary_security_settings_xml_size;
 
-static SceUID g_hooks[10];
-
+static SceUID g_hooks[11];
 
 typedef struct cfg_struct {
   uint8_t enable_mac_spoofing;
@@ -26,8 +26,6 @@ typedef struct cfg_struct {
 } __attribute__((packed)) cfg_struct;
 
 static cfg_struct config;
-
-
 static void save_config_user(void) {
   SceUID fd;
   fd = sceIoOpen(CONFIG_PATH, SCE_O_TRUNC | SCE_O_CREAT | SCE_O_WRONLY, 6);
@@ -57,8 +55,6 @@ static int load_config_user(void) {
   save_config_user();
   return 0;
 }
-
-/////////////////////////////////////////////////////////////////////////////////////////////////
 
 static tai_hook_ref_t g_scePafMiscLoadXmlLayout_SceSettings_hook;
 static int scePafMiscLoadXmlLayout_SceSettings_patched(int a1, void *xml_buf, int xml_size, int a4) {
@@ -165,6 +161,57 @@ static int sceRegMgrSetKeyStr_SceSystemSettingsCore_patched(const char *category
   return TAI_CONTINUE(int, g_sceRegMgrSetKeyStr_SceSystemSettingsCore_hook, category, name, string, length);
 }
 
+static tai_hook_ref_t g_scePafToplevelGetText_SceSystemSettingsCore_hook;
+static wchar_t *scePafToplevelGetText_SceSystemSettingsCore_patched(void *arg, char **msg) {
+  language_container_t *language_container;
+  int language = -1;
+  sceRegMgrGetKeyInt("/CONFIG/SYSTEM", "language", &language);
+  switch (language) {
+    case SCE_SYSTEM_PARAM_LANG_JAPANESE:      language_container = &language_japanese;      break;
+    case SCE_SYSTEM_PARAM_LANG_ENGLISH_US:    language_container = &language_english_us;    break;
+    case SCE_SYSTEM_PARAM_LANG_FRENCH:        language_container = &language_french;        break;
+    case SCE_SYSTEM_PARAM_LANG_SPANISH:       language_container = &language_spanish;       break;
+    case SCE_SYSTEM_PARAM_LANG_GERMAN:        language_container = &language_german;        break;
+    case SCE_SYSTEM_PARAM_LANG_ITALIAN:       language_container = &language_italian;       break;
+    case SCE_SYSTEM_PARAM_LANG_DUTCH:         language_container = &language_dutch;         break;
+    case SCE_SYSTEM_PARAM_LANG_PORTUGUESE_PT: language_container = &language_portuguese_pt; break;
+    case SCE_SYSTEM_PARAM_LANG_RUSSIAN:       language_container = &language_russian;       break;
+    case SCE_SYSTEM_PARAM_LANG_KOREAN:        language_container = &language_korean;        break;
+    case SCE_SYSTEM_PARAM_LANG_CHINESE_T:     language_container = &language_chinese_t;     break;
+    case SCE_SYSTEM_PARAM_LANG_CHINESE_S:     language_container = &language_chinese_s;     break;
+    case SCE_SYSTEM_PARAM_LANG_FINNISH:       language_container = &language_finnish;       break;
+    case SCE_SYSTEM_PARAM_LANG_SWEDISH:       language_container = &language_swedish;       break;
+    case SCE_SYSTEM_PARAM_LANG_DANISH:        language_container = &language_danish;        break;
+    case SCE_SYSTEM_PARAM_LANG_NORWEGIAN:     language_container = &language_norwegian;     break;
+    case SCE_SYSTEM_PARAM_LANG_POLISH:        language_container = &language_polish;        break;
+    case SCE_SYSTEM_PARAM_LANG_PORTUGUESE_BR: language_container = &language_portuguese_br; break;
+    case SCE_SYSTEM_PARAM_LANG_ENGLISH_GB:    language_container = &language_english_gb;    break;
+    case SCE_SYSTEM_PARAM_LANG_TURKISH:       language_container = &language_turkish;       break;
+    default:                                  language_container = &language_english_us;    break;
+  }
+  if (msg && sceClibStrncmp(*msg, "msg_", 4) == 0) {
+    #define LANGUAGE_ENTRY(name) \
+      else if (sceClibStrncmp(*msg, #name, sizeof(#name)) == 0) { \
+        return language_container->name; \
+      }
+    if (0) {}
+    LANGUAGE_ENTRY(msg_macspoofer)
+	LANGUAGE_ENTRY(msg_enable_macspoofing)
+	LANGUAGE_ENTRY(msg_styleformat)
+	LANGUAGE_ENTRY(msg_styleformat_0)
+	LANGUAGE_ENTRY(msg_styleformat_1)
+	LANGUAGE_ENTRY(msg_styleformat_2)
+	LANGUAGE_ENTRY(msg_styleformat_3)
+	LANGUAGE_ENTRY(msg_styleformat_4)
+	LANGUAGE_ENTRY(msg_enable_customtext)
+	LANGUAGE_ENTRY(msg_show_usecustomtext)
+	LANGUAGE_ENTRY(msg_enter_customtext)
+    LANGUAGE_ENTRY(msg_custom_text)
+    #undef LANGUAGE_ENTRY
+  }
+  return TAI_CONTINUE(wchar_t *, g_scePafToplevelGetText_SceSystemSettingsCore_hook, arg, msg);
+}
+
 typedef struct {
   int size;
   const char *name;
@@ -186,7 +233,6 @@ static int sceRegMgrGetKeysInfo_SceSystemSettingsCore_patched(const char *catego
   }
   return TAI_CONTINUE(int, g_sceRegMgrGetKeysInfo_SceSystemSettingsCore_hook, category, info, unk);
 }
-
 
 static SceUID g_system_settings_core_modid = -1;
 static tai_hook_ref_t g_sceKernelLoadStartModule_SceSettings_hook;
@@ -230,7 +276,12 @@ static SceUID sceKernelLoadStartModule_SceSettings_patched(char *path, SceSize a
                                         "SceSystemSettingsCore", 
                                         0xC436F916, // SceRegMgr
                                         0x58421DD1, 
-                                        sceRegMgrGetKeysInfo_SceSystemSettingsCore_patched);								 
+                                        sceRegMgrGetKeysInfo_SceSystemSettingsCore_patched);
+	g_hooks[9] = taiHookFunctionImport(&g_scePafToplevelGetText_SceSystemSettingsCore_hook, 
+                                        "SceSystemSettingsCore", 
+                                        0x4D9A9DD0, // ScePafToplevel
+                                        0x19CEFDA7, 
+                                        scePafToplevelGetText_SceSystemSettingsCore_patched);
   }
   return ret;
 }
@@ -246,12 +297,10 @@ static int sceKernelStopUnloadModule_SceSettings_patched(SceUID modid, SceSize a
     if (g_hooks[6] >= 0) taiHookRelease(g_hooks[6], g_sceRegMgrGetKeyStr_SceSystemSettingsCore_hook);
     if (g_hooks[7] >= 0) taiHookRelease(g_hooks[7], g_sceRegMgrSetKeyStr_SceSystemSettingsCore_hook);
     if (g_hooks[8] >= 0) taiHookRelease(g_hooks[8], g_sceRegMgrGetKeysInfo_SceSystemSettingsCore_hook);
-  
+	if (g_hooks[9] >= 0) taiHookRelease(g_hooks[9], g_scePafToplevelGetText_SceSystemSettingsCore_hook);
   }
   return TAI_CONTINUE(int, g_sceKernelStopUnloadModule_SceSettings_hook, modid, args, argp, flags, option, status);
 }
-
-
 
 void _start() __attribute__ ((weak, alias ("module_start")));
 int module_start(SceSize argc, const void *args) {
