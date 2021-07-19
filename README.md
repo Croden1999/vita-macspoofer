@@ -5,9 +5,13 @@ This was more of a fun project for me as hiding one's MAC doesn't make much sens
 
 这对我来说是一个更有趣的项目，因为隐藏MAC已经没有多大意义了，但在PSP时代相当流行。这不会改变你的实际MAC地址，也不会欺骗它的系统范围或在你的实际网络!            --Freakler
 
-![ref0](https://github.com/Freakler/vita-macspoofer/raw/master/capture_000.jpg)
+![ref0](https://github.com/Croden1999/vita-macspoofer/raw/master/capture_000.jpg)
 
-![ref1](https://github.com/Freakler/vita-macspoofer/raw/master/capture_001.jpg)
+![ref1](https://github.com/Croden1999/vita-macspoofer/raw/master/capture_001.jpg)
+
+![ref2](https://github.com/Croden1999/vita-macspoofer/raw/master/capture_002.jpg)
+
+![ref3](https://github.com/Croden1999/vita-macspoofer/raw/master/capture_003.jpg)
 *I still think plugins should have the ability to register their options to the HENkaku settings so we would have all plugin's options in one noobfriendly place.*            --Freakler
 
 *我仍然认为插件应该有能力注册他们的选项到HENkaku设置，这样我们将有所有插件的选项在一个对新手友好的地方。*            --Freakler
