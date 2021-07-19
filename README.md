@@ -12,6 +12,7 @@ This was more of a fun project for me as hiding one's MAC doesn't make much sens
 ![ref2](https://github.com/Croden1999/vita-macspoofer/raw/master/capture_002.jpg)
 
 ![ref3](https://github.com/Croden1999/vita-macspoofer/raw/master/capture_003.jpg)
+
 *I still think plugins should have the ability to register their options to the HENkaku settings so we would have all plugin's options in one noobfriendly place.*            --Freakler
 
 *我仍然认为插件应该有能力注册他们的选项到HENkaku设置，这样我们将有所有插件的选项在一个对新手友好的地方。*            --Freakler
