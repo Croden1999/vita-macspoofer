@@ -1,7 +1,7 @@
 # macspoofer
 A plugin to spoof your MAC address __in the System Information__ with advanced options. 
 
-这是一个可以伪装你系统信息MAC地址的插件。
+这是一个在高级选项可以伪装你系统信息MAC地址的插件。
 
 This was more of a fun project for me as hiding one's MAC doesn't make much sense anymore but was quite popular in the PSP days. __This will not change your actual MAC address and doesn't spoof it system wide or in your Network obviously!__            --Freakler
 
