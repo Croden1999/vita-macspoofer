@@ -3,7 +3,7 @@
 # macspoofer
 A plugin to spoof your MAC address __in the System Information__ with advanced options. 
 
-This was more of a fun project for me as hiding one's MAC doesn't make much sense anymore but was quite popular in the PSP days. __This will not change your actual MAC address and doesn't spoof it system wide or in your Network obviously!__            --Freakler
+"This was more of a fun project for me as hiding one's MAC doesn't make much sense anymore but was quite popular in the PSP days. __This will not change your actual MAC address and doesn't spoof it system wide or in your Network obviously!__"            --Freakler
 
 ![ref0](https://github.com/Croden1999/vita-macspoofer/raw/master/capture_000.jpg)
 
