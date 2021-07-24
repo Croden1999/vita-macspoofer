@@ -22,16 +22,9 @@ This was more of a fun project for me as hiding one's MAC doesn't make much sens
 
 ## Installation 安装流程
 1) Add *macspoofer.suprx* to `ur0:tai/config.txt` under `*NPXS10015` and `*NPXS10016`.such as,'ur0:tai/mmacspoofer.suprx'.  添加 *macspoofer.suprx* 到 `ur0:tai/config.txt` 下面 `*NPXS10015` and `*NPXS10016`，如'ur0:tai/macspoofer.suprx'。
-2) Reboot or reload tai config in HENkaku settings  重启或者在系统应用设定HENkaku设置重载tai config配置文件。
-3) Adjust spoofing options under 'Security' Tab in the Settings App  在设定应用程序的“安全性（加密）”标签下调整伪装选项。
+2) Reboot or reload tai config in HENkaku settings.  重启或者在系统应用设定HENkaku设置重载tai config配置文件。
+3) Adjust spoofing options under 'Security' Tab in the Settings App.  在设定应用程序的“安全性（加密）”标签下调整伪装选项。
 4) Profit!  开始配置吧！
-
-
-## 安装
-1) 添加 *macspoofer.suprx* 到 `ur0:tai/config.txt` 下面 `*NPXS10015` and `*NPXS10016`，如'ur0:tai/macspoofer.suprx'。
-2) 重启或者在系统应用设定HENkaku设置重载tai config配置文件。
-3) 在设定应用程序的“安全性（加密）”标签下调整伪装选项。
-4) 开始配置吧！
 
 
 ## Notes
