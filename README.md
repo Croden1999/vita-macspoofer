@@ -27,12 +27,8 @@ This was more of a fun project for me as hiding one's MAC doesn't make much sens
 4) Profit!  开始配置吧！
 
 
-## Notes
- - Limited functionality for PSTV users as 'Security' tab doesn't exist.
-
-
-## 笔记
- - PSVTV / PSTV 用户的有限功能作为“安全”选项不存在。
+## Notes 笔记
+ - Limited functionality for PSTV users as 'Security' tab doesn't exist.  PSVTV / PSTV 用户的有限功能作为“安全”选项不存在。
 
 
 ## Support language 支持的语言
