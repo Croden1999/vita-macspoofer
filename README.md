@@ -1,4 +1,4 @@
-中文说明书：https://github.com/Croden1999/vita-macspoofer/edit/master/README-zh.md
+中文说明书：https://github.com/Croden1999/vita-macspoofer/blob/master/README-zh.md
 
 # macspoofer
 A plugin to spoof your MAC address __in the System Information__ with advanced options. 
