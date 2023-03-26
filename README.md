@@ -29,8 +29,8 @@ A plugin to spoof your MAC address __in the System Information__ with advanced o
 
 ## Support language
 - English
-- Chinese Simplified
-- Chinese Traditional
+- Simplified Chinese
+- Traditional Chinese
 
 
 ## Credits & Thanks
