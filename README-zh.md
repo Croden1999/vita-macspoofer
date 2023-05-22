@@ -31,5 +31,5 @@
 - 繁体中文
 
 
-## 学分&感谢
+## 致谢
 Team Molecule, TheOfficialFlow, SKGleba, Princess-of-Sleeping, Freakler
