@@ -7,10 +7,6 @@
 
 ![ref1](https://github.com/Croden1999/vita-macspoofer/raw/master/capture_001.jpg)
 
-![ref2](https://github.com/Croden1999/vita-macspoofer/raw/master/capture_002.jpg)
-
-![ref3](https://github.com/Croden1999/vita-macspoofer/raw/master/capture_003.jpg)
-
 *“我仍然认为插件应该有能力注册他们的选项到HENkaku设置，这样我们将有所有插件的选项在对一个新手友好的地方。”*            --Freakler
 
 
