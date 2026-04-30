@@ -9,8 +9,6 @@ A plugin to spoof your MAC address __in the System Information__ with advanced o
 
 ![ref1](https://github.com/Croden1999/vita-macspoofer/raw/master/capture_001.jpg)
 
-![ref2](https://github.com/Croden1999/vita-macspoofer/raw/master/capture_002.jpg)
-
 *"I still think plugins should have the ability to register their options to the HENkaku settings so we would have all plugin's options in one noobfriendly place."*            --Freakler
 
 
