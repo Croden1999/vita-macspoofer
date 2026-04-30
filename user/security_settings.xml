@@ -32,11 +32,12 @@
 
 		<!-- style select -->
 		<list id="id_macspoof_character" key="/CONFIG/MACSPOOF/styleformat" icon="tex_spanner" title="msg_styleformat">
-			<list_item id="id_macspoof_zero" title="msg_styleformat_0" value="0"/>
-			<list_item id="id_macspoof_xxxx" title="msg_styleformat_1" value="1"/>
-			<list_item id="id_macspoof_ques" title="msg_styleformat_2" value="2"/>
-			<list_item id="id_macspoof_hash" title="msg_styleformat_3" value="3"/>
-			<list_item id="id_macspoof_mins" title="msg_styleformat_4" value="4"/>
+			<list_item id="id_macspoof_empty" title="-" value="0"/>
+			<list_item id="id_macspoof_zero" title="00:00:00:00:00:00" value="1"/>
+			<list_item id="id_macspoof_xxxx" title="XX:XX:XX:XX:XX:XX" value="2"/>
+			<list_item id="id_macspoof_ques" title="??:??:??:??:??:??" value="3"/>
+			<list_item id="id_macspoof_hash" title="##:##:##:##:##:##" value="4"/>
+			<list_item id="id_macspoof_mins" title="--:--:--:--:--:--" value="5"/>
 		</list>
 		
 		<spacer id="id_macspoof_spacer1" height="24"/>
