@@ -48,7 +48,7 @@ static int load_config_user(void) {
   //default config
   sceClibMemset(&config, 0, sizeof(config));
     config.enable_mac_spoofing = 1;
-    config.styleformat = 1;
+    config.styleformat = 0;
     config.enable_customtext = 0;
     sceClibMemset(config.custom_text, 0, 18);
     sceClibStrncpy(config.custom_text, "[HIDDEN]", 8);

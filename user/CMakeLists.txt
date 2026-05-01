@@ -44,7 +44,20 @@ add_executable(user
   user.c
 )
 
+add_executable(user_tv
+  ${xml_res}
+  user_tv.c
+)
+
 target_link_libraries(user
+  taihen_stub
+  SceLibKernel_stub
+  SceIofilemgr_stub
+  SceRegistryMgr_stub
+  SceVshBridge_stub
+)
+
+target_link_libraries(user_tv
   taihen_stub
   SceLibKernel_stub
   SceIofilemgr_stub
@@ -56,7 +69,16 @@ set_target_properties(user
   PROPERTIES LINK_FLAGS "-nostdlib"
 )
 
+set_target_properties(user_tv
+  PROPERTIES LINK_FLAGS "-nostdlib"
+)
+
 vita_create_self(macspoofer.suprx user
+  UNSAFE
+  CONFIG ${CMAKE_SOURCE_DIR}/user.yml
+)
+
+vita_create_self(macspoofer_tv.suprx user_tv
   UNSAFE
   CONFIG ${CMAKE_SOURCE_DIR}/user.yml
 )
