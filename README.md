@@ -14,14 +14,14 @@ A plugin to spoof your MAC address __in the System Information__ with advanced o
 
 ## Installation
 ### PSVita
-1) Add *macspoofer.suprx* to `ur0:tai/config.txt` under `*NPXS10015` and `*NPXS10016`
+1) Add *macspoofer.suprx* to `ur0:tai/config.txt` under `*NPXS10015` and `*NPXS10016`, for example: `ur0:tai/macspoofer.suprx`
 2) Reboot or reload tai config in HENkaku settings
 3) Adjust spoofing options under 'Security' Tab in the Settings App
 4) Profit!
 
 
 ### PS TV
-1) Add *macspoofer_tv.suprx* to `ur0:tai/config.txt` under `*NPXS10015` and `*NPXS10016`
+1) Add *macspoofer_tv.suprx* to `ur0:tai/config.txt` under `*NPXS10015` and `*NPXS10016`, for example: `ur0:tai/macspoofer_tv.suprx`
 2) Reboot or reload tai config in HENkaku settings
 3) Adjust spoofing options under 'Device' Tab in the Settings App
 4) Profit!
