@@ -51,7 +51,7 @@ static int load_config_user(void) {
     config.styleformat = 1;
     config.enable_customtext = 0;
     sceClibMemset(config.custom_text, 0, 18);
-    sceClibStrncpy(config.custom_text, msg_custom_text_hidden, 8);
+    sceClibStrncpy(config.custom_text, "[HIDDEN]", 8);
   save_config_user();
   return 0;
 }
@@ -203,7 +203,6 @@ static wchar_t *scePafToplevelGetText_SceSystemSettingsCore_patched(void *arg, c
 	LANGUAGE_ENTRY(msg_show_usecustomtext)
 	LANGUAGE_ENTRY(msg_enter_customtext)
     LANGUAGE_ENTRY(msg_custom_text)
-    LANGUAGE_ENTRY(msg_custom_text_hidden)
     #undef LANGUAGE_ENTRY
   }
   return TAI_CONTINUE(wchar_t *, g_scePafToplevelGetText_SceSystemSettingsCore_hook, arg, msg);
