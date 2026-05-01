@@ -40,7 +40,6 @@ language_container_t language_french = {
 	L"Enable to show a custom text of your choice instead",
 	L"Enter Custom Text",
 	L"You can use up to 18 characters",
-	L"[HIDDEN]",
 };
 
 language_container_t language_spanish = {
