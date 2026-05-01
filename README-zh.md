@@ -11,14 +11,18 @@
 
 
 ## 安装流程
-1) 添加 *macspoofer.suprx* 到 `ur0:tai/config.txt` 下面 `*NPXS10015` and `*NPXS10016`，如'ur0:tai/macspoofer.suprx'。
+### PSVita
+1) 在 `ur0:tai/config.txt` 添加 *macspoofer.suprx* 到 `*NPXS10015` 和 `*NPXS10016` 下面，如'ur0:tai/macspoofer.suprx'。
 2) 重启或者在系统应用设定HENkaku设置重载tai config配置文件。
 3) 在设定应用程序的“安全性（加密）”标签下调整伪装选项。
 4) 开始配置吧！
 
 
-## 笔记
- - PSVTV / PSTV 用户的有限功能作为“安全”选项不存在。
+### PSVita TV/PS TV
+1) 在 `ur0:tai/config.txt` 添加 *macspoofer_tv.suprx* 到 `*NPXS10015` 和 `*NPXS10016` 下面，如'ur0:tai/macspoofer_tv.suprx'。
+2) 重启或者在系统应用设定HENkaku设置重载tai config配置文件。
+3) 在设定应用程序的“周边设备”标签下调整伪装选项。
+4) 开始配置吧！
 
 
 ## 支持的语言
