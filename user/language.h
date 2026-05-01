@@ -9,7 +9,6 @@ typedef struct{
 	wchar_t *msg_show_usecustomtext;
 	wchar_t *msg_enter_customtext;
 	wchar_t *msg_custom_text;
-	wchar_t* msg_custom_text_hidden;
 } language_container_t;
 
 language_container_t language_japanese = {  
@@ -20,7 +19,6 @@ language_container_t language_japanese = {
 	L"Enable to show a custom text of your choice instead",
 	L"Enter Custom Text",
 	L"You can use up to 18 characters",
-	L"[HIDDEN]",
 };
 
 //By Freakler
@@ -32,7 +30,6 @@ language_container_t language_english_us = {
 	L"Enable to show a custom text of your choice instead",
 	L"Enter Custom Text",
 	L"You can use up to 18 characters",
-	L"[HIDDEN]",
 };
 
 language_container_t language_french = {
@@ -54,7 +51,6 @@ language_container_t language_spanish = {
 	L"Enable to show a custom text of your choice instead",
 	L"Enter Custom Text",
 	L"You can use up to 18 characters",
-	L"[HIDDEN]",
 };
 
 language_container_t language_german = {
@@ -65,7 +61,6 @@ language_container_t language_german = {
 	L"Enable to show a custom text of your choice instead",
 	L"Enter Custom Text",
 	L"You can use up to 18 characters",
-	L"[HIDDEN]",
 };
 
 language_container_t language_italian = {
@@ -76,7 +71,6 @@ language_container_t language_italian = {
 	L"Enable to show a custom text of your choice instead",
 	L"Enter Custom Text",
 	L"You can use up to 18 characters",
-	L"[HIDDEN]",
 };
 
 language_container_t language_dutch = {
@@ -87,7 +81,6 @@ language_container_t language_dutch = {
 	L"Enable to show a custom text of your choice instead",
 	L"Enter Custom Text",
 	L"You can use up to 18 characters",
-	L"[HIDDEN]",
 };
 
 language_container_t language_portuguese_pt = {
@@ -98,7 +91,6 @@ language_container_t language_portuguese_pt = {
 	L"Enable to show a custom text of your choice instead",
 	L"Enter Custom Text",
 	L"You can use up to 18 characters",
-	L"[HIDDEN]",
 };
 
 language_container_t language_russian = {
@@ -109,7 +101,6 @@ language_container_t language_russian = {
 	L"Enable to show a custom text of your choice instead",
 	L"Enter Custom Text",
 	L"You can use up to 18 characters",
-	L"[HIDDEN]",
 };
 
 language_container_t language_korean = {
@@ -120,7 +111,6 @@ language_container_t language_korean = {
 	L"Enable to show a custom text of your choice instead",
 	L"Enter Custom Text",
 	L"You can use up to 18 characters",
-	L"[HIDDEN]",
 };
 
 // Translation provided by Croden1999
@@ -132,7 +122,6 @@ language_container_t language_chinese_t = {
 	L"啟用顯示您所選擇的自訂文本",
 	L"輸入自訂文本",
 	L"最多可以使用18個字符",
-	L"[已隱藏]",
 };
 
 // Translation provided by Croden1999
@@ -144,7 +133,6 @@ language_container_t language_chinese_s = {
 	L"启用显示您所选择的自定义文本",
 	L"输入自定义文本",
 	L"最多可以使用18个字符",
-	L"[已隐藏]",
 };
 
 language_container_t language_finnish = {
@@ -155,7 +143,6 @@ language_container_t language_finnish = {
 	L"Enable to show a custom text of your choice instead",
 	L"Enter Custom Text",
 	L"You can use up to 18 characters",
-	L"[HIDDEN]",
 };
 
 language_container_t language_swedish = {
@@ -166,7 +153,6 @@ language_container_t language_swedish = {
 	L"Enable to show a custom text of your choice instead",
 	L"Enter Custom Text",
 	L"You can use up to 18 characters",
-	L"[HIDDEN]",
 };
 
 language_container_t language_danish = {
@@ -177,7 +163,6 @@ language_container_t language_danish = {
 	L"Enable to show a custom text of your choice instead",
 	L"Enter Custom Text",
 	L"You can use up to 18 characters",
-	L"[HIDDEN]",
 };
 
 language_container_t language_norwegian = {
@@ -188,7 +173,6 @@ language_container_t language_norwegian = {
 	L"Enable to show a custom text of your choice instead",
 	L"Enter Custom Text",
 	L"You can use up to 18 characters",
-	L"[HIDDEN]",
 };
 
 language_container_t language_polish = {
@@ -199,7 +183,6 @@ language_container_t language_polish = {
 	L"Enable to show a custom text of your choice instead",
 	L"Enter Custom Text",
 	L"You can use up to 18 characters",
-	L"[HIDDEN]",
 };
 
 language_container_t language_portuguese_br = {
@@ -210,7 +193,6 @@ language_container_t language_portuguese_br = {
 	L"Enable to show a custom text of your choice instead",
 	L"Enter Custom Text",
 	L"You can use up to 18 characters",
-	L"[HIDDEN]",
 };
 
 //By Freakler
@@ -222,7 +204,6 @@ language_container_t language_english_gb = {
 	L"Enable to show a custom text of your choice instead",
 	L"Enter Custom Text",
 	L"You can use up to 18 characters",
-	L"[HIDDEN]",
 };
 
 language_container_t language_turkish = {
@@ -233,7 +214,6 @@ language_container_t language_turkish = {
 	L"Enable to show a custom text of your choice instead",
 	L"Enter Custom Text",
 	L"You can use up to 18 characters",
-	L"[HIDDEN]",
 };
 
 #endif // LANGUAGE_HEADER
